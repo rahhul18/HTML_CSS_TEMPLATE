@@ -1,0 +1,482 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+        font-family: 'Trebuchet MS', sans-serif;
+        background-color: black;
+    }
+    .container {
+        width: 50%;
+        margin: auto;
+    }
+    /*############## Comman CSS ############## */
+
+   .header,.blog, .hero {
+        display: flex;
+        justify-content: space-between;
+    }
+    /*################# Header Section ################ */
+    .header {
+        background-color: #1d2120;
+        height: 72px;
+        border-bottom: 5px solid #bbd240;
+        padding: 0 10%;
+    }
+    .logo {
+        margin: 14px 0 0;
+    }
+    .logo a{
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+        font-family: 'Times New Roman', serif;
+    }
+    .logo span {
+        color: #84847a;
+        display: block;
+        font-size: 10px;
+        font-weight: bold;
+        margin-left: 12px;
+        font-family: 'Times New Roman', serif;
+    }
+    .nav{
+        width: 450px;
+        font-family: Verdana, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .nav ul  {
+        width: 100%;
+        font-size: 12px;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #252928;
+        padding: 10px 12px;
+        border-radius: 24px;
+        margin-left: 16px;
+        border: 1px solid #2d3130;
+    }
+    .nav ul li a {
+        text-decoration: none;
+        letter-spacing: -1px;
+        color: #878988;
+    }
+    .nav ul li:first-child a{
+        color: #bbd33c;
+        padding-left: -8px;
+    }
+    .nav ul li:not(li:last-child)::after {
+        content: "";
+        border-right: 2px solid #313534;
+        margin-left: 22px;
+        padding: 4px 0;
+    }
+    .toggle__bar{
+        display:none;
+        color: white;
+        margin-top: 24px;
+        margin-right: 10px;
+        position: relative;
+    }
+    .toggle__list{
+        width:200px;
+        height: 220px;
+        background-color: #1d2120 ;
+        position: absolute;
+        left: -148px;
+        top: 48px;
+        padding: 10px 20px;
+        z-index: 5;
+        transition: 0.5s ease;
+        display: none;
+        text-align: center;
+    }
+    .toggle__list ul {
+        list-style: none;
+        display: inline-block;
+    }
+    .toggle__list ul li a {
+        text-decoration: none;
+        color:  #878988;
+        line-height: 40px;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    .toggle__bar:hover .toggle__list{
+        display: block;
+    }
+
+    /*################# Main Section ################ */
+
+    .blog{
+        background: linear-gradient(0deg,#454545,#7a7a7a);
+        padding: 24px 10% ;
+    }
+
+    .blog__design{
+        width: 44%;
+    }
+    .blog__design img                                                                                                                                                             {
+        border: 6px solid #f0f0f0;
+        height: auto;
+        width: 100%;
+        outline: 1px solid black;
+    }
+
+    .blog__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6px 0;
+        height: auto;
+        width: 52%;
+    }
+    .blog__text h3{
+        margin: 0;
+        color: white;
+        font-size: 28px;
+        font-weight: normal;
+        display:block;
+    }
+    .blog__text p{
+        display: block;
+        font-size: 18px;
+        color: #90958b;
+        font-weight: 400;
+    }
+    .blog__text button{
+        width: 90px;
+        background-color: #dbee7b;
+        font-size: 12px;
+        border: none;
+        padding: 2px;
+        border-radius: 4px;
+        font-weight: 900;
+    }
+
+    
+
+/*################# Hero Section ################ */
+    .hero {
+        padding: 16px 10% 46px;
+        background-color: #fefefe;
+    }
+    .hero__website{
+        width: 62%;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        margin-top: 16px;
+    }
+    .hero__website h1 {
+        border-bottom: 2px solid  #bbd04e;
+        padding: 8px 0;
+        position: relative;
+        font-family: 'Trebuchet MS', sans-serif;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+    .hero__website h1::after {
+        content: "";
+        border:3px solid #bad142;
+        width: 80px;
+        position: absolute;
+        bottom: -6px;
+        left:0;
+    }
+    .hero__website .website__text {
+        color: gray;
+        line-height: 17px;
+        margin-top: 16px;
+        font-size: 11px;
+    }
+    .hero__website .website--dark{
+        color: black;
+    }
+    .hero__website ul {
+        padding: 10px 0 4px 32px;
+    }
+    .hero__website ul li {
+        list-style: square;
+    }
+    ::marker {
+        font-size: 16px;
+    }
+    .hero__website .last--text{
+        padding-left: 20px;
+        border-left: 8px solid #cedd75;
+    }
+    .latest__news{
+        width: 250px;
+        margin-top: 30px;
+    }
+    .latest__news h1{
+        background-color: #3e3e3e;
+        color: white;
+        padding: 12px 24px;
+        margin: 0;
+        font-size: 16px;
+        font-family: 'Trebuchet MS', sans-serif;
+        border-bottom: 1px solid black;
+    }
+    .news__gallery{
+        display: flex;
+        justify-content: start;
+        padding:16px 10px;
+        font-size: 12px;
+        margin-top: 0;
+        background-color: #efefef;
+    }
+    .news__gallery:nth-child(odd)
+    {
+        background-color:#dfdfdf;
+    }
+
+    .news__gallery img {
+        width: 65px;
+        height: 65px;
+        border: 3px solid white;
+        margin: 0 8px;
+    }
+    .news__details{
+        display: flex;
+        flex-direction: column;
+        font-family: "Arial Narrow", sans-serif;
+    }
+    .news__details span:first-child {
+        color:#90958b;
+    }
+    .news__details span:nth-child(even) {
+        font-family: Arial Black,sans-serif;
+        font-size: 11px;
+    }
+     span:last-child {
+         font-size: 12px;
+         font-family: "Arial Narrow", sans-serif;
+         color: gray;
+    }
+    /*################# Footer Section ################ */
+     .footer{
+         background-color: #242827;
+         border-top: 5px solid #b7ce3f;
+         color: white;
+         padding: 10px 10%;
+     }
+     .top__footer{
+         display: flex;
+         justify-content: space-between;
+         margin: 14px 28px 14px 0;
+     }
+
+     .top__footer ul {
+         margin-bottom: 10px;
+         min-width: 120px;
+         list-style: none;
+         padding: 0;
+     }
+
+     .top__footer ul li{
+         line-height:20px;
+         color:  #666765;
+         padding: 0 14px;
+         font-size: 12px;
+         font-family: "Arial Narrow", sans-serif;
+     }
+    .top__footer ul li:first-child{
+        color: white;
+        min-width: 120px;
+        font-size: 11px;
+        opacity: 0.8;
+        background-color: #212524;
+        padding: 0 14px 2px;
+        margin-bottom: 2px;
+        outline: 1px solid #2d3130;
+        border-radius: 12px;
+        font-family: "verdana", sans-serif;
+    }
+    .bottom__footer p {
+        color: #666765;
+        font-size: 11px;
+    }
+    .bottom__footer span {
+        color: #454644;
+        font-size: 11px;
+    }
+    /* ########## Media Query ############## */
+
+    @media screen and (max-width: 1600px) {
+        .container {
+            min-width: 55%;
+        }
+        .nav ul {
+            width: 100%;
+        }
+        .hero__website{
+            width: 60%;
+        }
+        .latest__news{
+            min-width: 200px;
+        }
+    }
+ @media screen and (max-width: 1440px) {
+
+     .container {
+         width: 62%;
+     }
+     .nav ul {
+         width: 90%;
+     }
+     .hero__website .website__text{
+         line-height: 14px;
+     }
+ }
+
+@media screen and (max-width: 1250px) {
+    .container {
+        width: 72%;
+    }
+    .nav ul {
+        width: 800%;
+    }
+    .hero__website .website__text{
+        line-height: 14px;
+    }
+    .blog__text  h3{
+        font-size: 26px;
+    }
+    .blog__text p{
+        font-size: 16px;
+    }
+    .top__footer{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+    .header{
+        padding: 0 5%;
+    }
+    .nav ul{
+        width: 100%;
+    }
+    .blog {
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog__design {
+        width: 60%;
+    }
+    .blog__text {
+        width: 60%;
+        justify-content: center;
+        margin-top: 16px;
+        margin-left: 8px;
+    }
+    .blog__text  h3{
+        font-size: 24px;
+    }
+    .blog__text p{
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero__website, .latest__news {
+        width: 80%;
+    }
+    .footer{
+        padding: 10px 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .nav{
+        max-width: 400px;
+    }
+    .nav ul {
+        width: 100%;
+        /*flex-wrap: wrap;*/
+        justify-content: space-around;
+    }
+    .blog__design {
+        width: 80%;
+    }
+    .blog__text {
+        width: 80%;
+        margin-top: 16px;
+    }
+    .hero {
+        padding: 16px 10%;
+    }
+    .hero__website, .latest__news {
+        width: 90%;
+    }
+    .top__footer{
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    .top__footer ul{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+    .header {
+        padding: 0 5%;
+    }
+    .logo{
+        margin: auto;
+        text-align: center;
+    }
+    .logo span{
+        margin: 0;
+    }
+    .nav{
+        display: none;
+    }
+    .toggle__bar{
+        display: block;
+    }
+    .blog {
+        padding: 16px 5%;
+    }
+    .blog__design {
+        width: 90%;
+    }
+    .blog__text {
+        width: 90%;
+        margin-top: 16px;
+    }
+    .hero {
+        padding: 16px 5%;
+    }
+    .hero__website, .latest__news {
+        width: 100%;
+    }
+    .top__footer{
+        flex-direction: column;
+        align-content: center;
+    }
+    .top__footer ul{
+        width: 120px;
+        text-align: center;
+    }
+    .bottom__footer{
+        text-align: center;
+    }
+}
